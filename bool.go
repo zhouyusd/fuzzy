@@ -4,6 +4,10 @@ import "fmt"
 
 type Bool bool
 
+func (v *Bool) Value() bool {
+	return bool(*v)
+}
+
 func (v *Bool) UnmarshalJSON(data []byte) error {
 	raw, null, err := scalarText(data)
 	if err != nil || null {

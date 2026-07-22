@@ -20,3 +20,23 @@ func (v *Bool) UnmarshalJSON(data []byte) error {
 	*v = raw == "true"
 	return nil
 }
+
+func (v *Bool) Scan(src any) error {
+	if src == nil {
+		*v = false
+		return nil
+	}
+
+	switch b := src.(type) {
+	case bool:
+		*v = Bool(b)
+	case int64:
+		*v = b != 0
+	case []byte:
+		*v = string(b) == "1" || string(b) == "true"
+	default:
+		return fmt.Errorf("cannot scan %T into fuzzy.Bool", src)
+	}
+
+	return nil
+}

@@ -32,6 +32,10 @@ func unmarshalFloat[T Float](data []byte, target *T, bitSize int) error {
 
 type Float32 float32
 
+func NewFloat32(f float32) *Float32 {
+	return new(Float32(f))
+}
+
 func (v *Float32) Value() float32 {
 	return float32(*v)
 }
@@ -41,6 +45,10 @@ func (v *Float32) UnmarshalJSON(data []byte) error {
 }
 
 type Float64 float64
+
+func NewFloat64(f float64) *Float64 {
+	return new(Float64(f))
+}
 
 func (v *Float64) Value() float64 {
 	return float64(*v)

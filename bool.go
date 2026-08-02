@@ -4,6 +4,10 @@ import "fmt"
 
 type Bool bool
 
+func NewBool(b bool) *Bool {
+	return new(Bool(b))
+}
+
 func (v *Bool) Value() bool {
 	return bool(*v)
 }

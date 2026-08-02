@@ -25,6 +25,10 @@ func unmarshalInt[T Integer](data []byte, target *T, bitSize int) error {
 
 type Int int
 
+func NewInt(i int) *Int {
+	return new(Int(i))
+}
+
 func (v *Int) Value() int {
 	return int(*v)
 }
@@ -34,6 +38,10 @@ func (v *Int) UnmarshalJSON(data []byte) error {
 }
 
 type Int8 int8
+
+func NewInt8(i int8) *Int8 {
+	return new(Int8(i))
+}
 
 func (v *Int8) Value() int8 {
 	return int8(*v)
@@ -45,6 +53,10 @@ func (v *Int8) UnmarshalJSON(data []byte) error {
 
 type Int16 int16
 
+func NewInt16(i int16) *Int16 {
+	return new(Int16(i))
+}
+
 func (v *Int16) Value() int16 {
 	return int16(*v)
 }
@@ -55,6 +67,10 @@ func (v *Int16) UnmarshalJSON(data []byte) error {
 
 type Int32 int32
 
+func NewInt32(i int32) *Int32 {
+	return new(Int32(i))
+}
+
 func (v *Int32) Value() int32 {
 	return int32(*v)
 }
@@ -64,6 +80,10 @@ func (v *Int32) UnmarshalJSON(data []byte) error {
 }
 
 type Int64 int64
+
+func NewInt64(i int64) *Int64 {
+	return new(Int64(i))
+}
 
 func (v *Int64) Value() int64 {
 	return int64(*v)

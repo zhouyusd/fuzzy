@@ -25,6 +25,10 @@ func unmarshalUint[T UnsignedInteger](data []byte, target *T, bitSize int) error
 
 type Uint uint
 
+func NewUint(ui uint) *Uint {
+	return new(Uint(ui))
+}
+
 func (v *Uint) Value() uint {
 	return uint(*v)
 }
@@ -34,6 +38,10 @@ func (v *Uint) UnmarshalJSON(data []byte) error {
 }
 
 type Uint8 uint8
+
+func NewUint8(ui uint8) *Uint8 {
+	return new(Uint8(ui))
+}
 
 func (v *Uint8) Value() uint8 {
 	return uint8(*v)
@@ -45,6 +53,10 @@ func (v *Uint8) UnmarshalJSON(data []byte) error {
 
 type Uint16 uint16
 
+func NewUint16(ui uint16) *Uint16 {
+	return new(Uint16(ui))
+}
+
 func (v *Uint16) Value() uint16 {
 	return uint16(*v)
 }
@@ -55,6 +67,10 @@ func (v *Uint16) UnmarshalJSON(data []byte) error {
 
 type Uint32 uint32
 
+func NewUint32(ui uint32) *Uint32 {
+	return new(Uint32(ui))
+}
+
 func (v *Uint32) Value() uint32 {
 	return uint32(*v)
 }
@@ -64,6 +80,10 @@ func (v *Uint32) UnmarshalJSON(data []byte) error {
 }
 
 type Uint64 uint64
+
+func NewUint64(ui uint64) *Uint64 {
+	return new(Uint64(ui))
+}
 
 func (v *Uint64) Value() uint64 {
 	return uint64(*v)

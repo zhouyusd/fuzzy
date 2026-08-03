@@ -37,6 +37,9 @@ func NewFloat32(f float32) *Float32 {
 }
 
 func (v *Float32) Value() float32 {
+	if v == nil {
+		return 0
+	}
 	return float32(*v)
 }
 
@@ -51,6 +54,9 @@ func NewFloat64(f float64) *Float64 {
 }
 
 func (v *Float64) Value() float64 {
+	if v == nil {
+		return 0
+	}
 	return float64(*v)
 }
 

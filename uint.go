@@ -30,6 +30,9 @@ func NewUint(ui uint) *Uint {
 }
 
 func (v *Uint) Value() uint {
+	if v == nil {
+		return 0
+	}
 	return uint(*v)
 }
 
@@ -44,6 +47,9 @@ func NewUint8(ui uint8) *Uint8 {
 }
 
 func (v *Uint8) Value() uint8 {
+	if v == nil {
+		return 0
+	}
 	return uint8(*v)
 }
 
@@ -58,6 +64,9 @@ func NewUint16(ui uint16) *Uint16 {
 }
 
 func (v *Uint16) Value() uint16 {
+	if v == nil {
+		return 0
+	}
 	return uint16(*v)
 }
 
@@ -72,6 +81,9 @@ func NewUint32(ui uint32) *Uint32 {
 }
 
 func (v *Uint32) Value() uint32 {
+	if v == nil {
+		return 0
+	}
 	return uint32(*v)
 }
 
@@ -86,6 +98,9 @@ func NewUint64(ui uint64) *Uint64 {
 }
 
 func (v *Uint64) Value() uint64 {
+	if v == nil {
+		return 0
+	}
 	return uint64(*v)
 }
 

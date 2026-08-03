@@ -30,6 +30,9 @@ func NewInt(i int) *Int {
 }
 
 func (v *Int) Value() int {
+	if v == nil {
+		return 0
+	}
 	return int(*v)
 }
 
@@ -44,6 +47,9 @@ func NewInt8(i int8) *Int8 {
 }
 
 func (v *Int8) Value() int8 {
+	if v == nil {
+		return 0
+	}
 	return int8(*v)
 }
 
@@ -58,6 +64,9 @@ func NewInt16(i int16) *Int16 {
 }
 
 func (v *Int16) Value() int16 {
+	if v == nil {
+		return 0
+	}
 	return int16(*v)
 }
 
@@ -72,6 +81,9 @@ func NewInt32(i int32) *Int32 {
 }
 
 func (v *Int32) Value() int32 {
+	if v == nil {
+		return 0
+	}
 	return int32(*v)
 }
 
@@ -86,6 +98,9 @@ func NewInt64(i int64) *Int64 {
 }
 
 func (v *Int64) Value() int64 {
+	if v == nil {
+		return 0
+	}
 	return int64(*v)
 }
 

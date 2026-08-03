@@ -9,6 +9,9 @@ func NewBool(b bool) *Bool {
 }
 
 func (v *Bool) Value() bool {
+	if v == nil {
+		return false
+	}
 	return bool(*v)
 }
 
